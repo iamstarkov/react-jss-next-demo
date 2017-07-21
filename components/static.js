@@ -1,5 +1,5 @@
 import React from 'react';
-import injectSheet from 'react-jss';
+import injectSheet from '@iamstarkov/react-jss';
 
 const styles = theme => ({
   static: {
@@ -12,7 +12,8 @@ const styles = theme => ({
     'box-sizing': 'border-box',
     transition: 'all 0.1s linear',
     'margin-right': '1em',
-    border: 0,
+    border: `1px solid ${theme.color}`,
+    // border: `10px solid ${theme.color}`,
 
     'border-radius': props => `${props.radius}px`,
     color: theme.color,

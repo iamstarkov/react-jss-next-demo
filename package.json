@@ -12,9 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@iamstarkov/react-jss": "^7.0.2",
     "next": "^3.0.1-beta.13",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-jss": "^7.0.0-pre.2"
+    "react-dom": "^15.6.1"
   }
 }

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { ThemeProvider } from 'react-jss';
+import { ThemeProvider } from '@iamstarkov/react-jss';
 
-import { Dynamic, Static } from '../components';
+import { Dynamic, Static, Counter } from '../components';
 
 const light = {
+  // color: 'green',
   color: 'tomato',
   bg: '#f5f5f5',
 };
@@ -70,6 +71,7 @@ export default class App extends Component {
               <div>
                 <Static radius={this.state.radius}>static</Static>
                 <Dynamic radius={this.state.radius}>static</Dynamic>
+                <Counter />
               </div>
             </ThemeProvider>
           </div>}
