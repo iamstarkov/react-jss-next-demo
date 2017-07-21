@@ -1,5 +1,5 @@
 import React from 'react';
-import injectSheet from 'react-jss';
+import injectSheet from '@iamstarkov/react-jss';
 
 const styles = theme => ({
   static: {

@@ -1,5 +1,5 @@
 import React from 'react';
-import injectSheet, { withTheme } from 'react-jss';
+import injectSheet, { withTheme } from '@iamstarkov/react-jss';
 
 const styles = {
   dynamic: {
