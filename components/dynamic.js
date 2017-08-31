@@ -1,5 +1,5 @@
 import React from 'react';
-import injectSheet, { withTheme } from '@iamstarkov/react-jss';
+import injectSheet, { withTheme } from 'react-jss';
 
 const styles = {
   dynamic: {
@@ -10,9 +10,8 @@ const styles = {
     'justify-content': 'center',
     'align-items': 'center',
     'box-sizing': 'border-box',
-    transition: 'all 0.1s linear',
+    transition: 'all 0.2s ease-in-out',
     'margin-right': '1em',
-    border: '1px solid transparent',
 
     'border-radius': props => `${props.radius}px`,
     color: ({ theme }) => theme.color,
@@ -20,10 +19,9 @@ const styles = {
   },
 };
 
-const Dynamic = ({ classes, children }) => (
+const Dynamic = ({ classes, children }) =>
   <div className={classes.dynamic}>
     {children}
-  </div>
-);
+  </div>;
 
 export default withTheme(injectSheet(styles)(Dynamic));

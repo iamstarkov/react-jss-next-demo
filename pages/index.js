@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ThemeProvider } from '@iamstarkov/react-jss';
+import { ThemeProvider } from 'react-jss';
 
 import { Dynamic, Static, Counter } from '../components';
 
@@ -14,7 +14,7 @@ const dark = {
   bg: '#333',
 };
 
-
+// <h1>Hello from advanced jss theming w/ HMR</h1>
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -45,7 +45,6 @@ export default class App extends Component {
   render() {
     return (
       <div style={{ margin: '50px' }}>
-        <h1>Hello from advanced jss theming</h1>
         <div>
           <button onClick={this.toggle}>Toggle</button>
         </div>
@@ -53,16 +52,7 @@ export default class App extends Component {
           <button onClick={this.toggleTheme}>Toggle theme</button>
         </div>
         <div>
-          borderRadius:
-          {' '}
-          <input
-            type="number"
-            onChange={this.setRadius}
-            value={this.state.radius}
-            step="10"
-            min="0"
-            max="100"
-          />
+          borderRadius: <input type="number" onChange={this.setRadius} value={this.state.radius} step="10" min="0" max="100" />
         </div>
         <br />
         {this.state.show &&

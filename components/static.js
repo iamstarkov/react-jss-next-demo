@@ -1,5 +1,5 @@
 import React from 'react';
-import injectSheet from '@iamstarkov/react-jss';
+import injectSheet from 'react-jss';
 
 const styles = theme => ({
   static: {
@@ -10,10 +10,8 @@ const styles = theme => ({
     'justify-content': 'center',
     'align-items': 'center',
     'box-sizing': 'border-box',
-    transition: 'all 0.1s linear',
     'margin-right': '1em',
-    border: `1px solid ${theme.color}`,
-    // border: `10px solid ${theme.color}`,
+    transition: 'all 0.2s ease-in-out',
 
     'border-radius': props => `${props.radius}px`,
     color: theme.color,
@@ -21,10 +19,9 @@ const styles = theme => ({
   },
 });
 
-const Static = ({ classes, children }) => (
+const Static = ({ classes, children }) =>
   <div className={classes.static}>
     {children}
-  </div>
-);
+  </div>;
 
 export default injectSheet(styles)(Static);

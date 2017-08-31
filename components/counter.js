@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import injectSheet from '@iamstarkov/react-jss';
+import injectSheet from 'react-jss';
 
 const styles = {
   counter: {
@@ -27,7 +27,11 @@ class Counter extends Component {
   }
 
   render() {
-    return <h2 className={this.props.classes.counter}>Counter: {this.state.counter}</h2>;
+    return (
+      <h2 className={this.props.classes.counter}>
+        Counter: {this.state.counter}
+      </h2>
+    );
   }
 }
 
