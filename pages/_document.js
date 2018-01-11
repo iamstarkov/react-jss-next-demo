@@ -14,9 +14,7 @@ export default class AppDocument extends Document {
     const renderedPage = renderPage(decoratePage);
 
     const styles = (
-      <style type="text/css" data-meta="jss-ssr">
-        {sheets.toString()}
-      </style>
+      <style type="text/css" data-meta="jss-ssr" dangerouslySetInnerHTML={{ __html: sheets.toString() }} />
     );
 
     return { ...renderedPage, styles };
