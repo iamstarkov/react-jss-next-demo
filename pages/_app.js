@@ -1,6 +1,7 @@
-import {Component} from 'react'
-import App, {Container} from 'next/app'
-import withStyle from 'react-jss'
+import {Component} from 'react';
+import App, {Container} from 'next/app';
+import withStyle, { JssProvider } from 'react-jss';
+import {getSheetsRegistry} from '../SheetsRegistry';
 
 @withStyle({
   layout: {
@@ -27,15 +28,17 @@ export default
 class MyApp extends App {
 
   render () {
-    const {Component: Page, pageProps} = this.props
+    const {Component: Page, pageProps} = this.props;
 
     return (
-      <Container>
-        <Layout>
-          <Page {...pageProps} />
-        </Layout>
-      </Container>
-    )
+      <JssProvider registry={getSheetsRegistry()}>
+        <Container>
+          <Layout>
+            <Page {...pageProps} />
+          </Layout>
+        </Container>
+      </JssProvider>
+    );
   }
 
 }
