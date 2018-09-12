@@ -20,6 +20,8 @@ export default class AppDocument extends Document {
       </JssProvider>;
 
     const renderedPage = renderPage(decoratePage);
+    
+    console.log(' ----------- styles?', sheets.toString()) // seems to be an empty string
 
     const styles = (
       <style type="text/css" data-meta="jss-ssr" dangerouslySetInnerHTML={{ __html: sheets.toString() }} />
